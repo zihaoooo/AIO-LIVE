@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sensing Station</title>
+
+    <!-- Link to d3 -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+</head>
+
+<body>
+    <div><select id="dataSet" onchange="changeData()">
+  <option value="temperature">Temperature</option>
+  <option value="humidity" selected="selected">Humidity</option>
+  <option value="sound">Sound</option>
+</select>
+    </div>
+    
+<div> <div class = "liveMenu"> Live </div>
+    <div class = "liveMenu">
+    <label class="switch">
+  <input type="checkbox" id ="liveToggle">
+  <span class="slider round"></span>  
+    </label></div></div>
+    
+    <div id="startTime">
+        <form action="/action_page.php">
+  Start Time:
+  <input type="datetime-local" name="bdaytime">
+ End Time:
+  <input type="datetime-local" name="bdaytime">
+    Resolution:
+<input type="number" name="quantity" min="200" max="1000">
+  <input type="button" id="selectData">
+</form>
+    </div>
+    <div id="part-one">
+        <h1></h1>
+        <p></p>
+        <svg id="bar-chart" width="960" height="500"></svg>
+
+    </div>
+    <div id="container">
+    </div>
+
+
+</body>
+
+<!-- Custom javascript (d3) -->
+<script src="scripts.js"></script>
+
+</html>
