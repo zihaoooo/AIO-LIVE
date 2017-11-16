@@ -66,7 +66,7 @@ var div = d3.select("body").append("div")
 var data = [];
 
 $.ajax({
-  url: 'https://io.adafruit.com/api/v2/2012zhangzihao/feeds/ccus.' + dataSet + '/data?start_time=' + startTime + '&end_time=' + endTime + '&limit=500',
+  url: 'https://io.adafruit.com/api/v2/2012zhangzihao/feeds/ccus.' + dataSet + '/data?start_time=' + startTime + '&end_time=' + endTime + '&limit=200',
   dataType: 'json',
   async: false,
   success: function(result) {
